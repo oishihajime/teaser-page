@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BrandDeck | 8月1日オープン予定</title>
+<title>Clarity | 8月1日オープン予定</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #ffffff;
-    --text-primary: #333333;
-    --text-secondary: #666666;
-    --accent: #6f8bff;
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: var(--bg);
-    color: var(--text-primary);
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", -apple-system, sans-serif;
+    background: #fff;
+    color: #333;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -27,29 +27,63 @@
   .container {
     max-width: 390px;
     width: 100%;
-    text-align: center;
+    text-align: left;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 28px;
   }
+  .title-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+  }
+  .logo {
+    font-family: "DIN Alternate", "DIN Condensed", "Barlow", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    background: linear-gradient(90deg, #27AB7E, #27AAAB, #2781AB, #22AB4F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 200%;
+    animation: rainbow-shift 4s ease-in-out infinite alternate;
+  }
+  @keyframes rainbow-shift {
+    0% { background-position: 0%; }
+    100% { background-position: 100%; }
+  }
+  .spotify-link {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .spotify-link:hover { opacity: 0.7; }
+  .sp-icon { width: 18px; height: 18px; }
   .announce {
-    font-size: 1.1rem;
-    line-height: 2;
-    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 1rem;
   }
   .subtext {
-    font-size: 0.9rem;
-    line-height: 1.9;
-    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 1.25rem;
   }
   .date-badge {
+    font-family: "DIN Alternate", "DIN Condensed", "Barlow", sans-serif;
     font-size: 0.85rem;
-    letter-spacing: 0.2em;
-    color: var(--accent);
-    border: 1px solid rgba(111, 139, 255, 0.4);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: #27AB7E;
+    border: 1px solid rgba(39, 171, 126, 0.4);
     border-radius: 999px;
-    padding: 6px 20px;
+    padding: 5px 16px;
+    display: inline-block;
   }
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(8px); }
@@ -59,8 +93,17 @@
 </head>
 <body>
   <div class="container">
-    <p class="announce">8月1日、<br>ブランド定義のための<br>カードソーティングサービスが<br>オープンします。</p>
-    <p class="subtext">オープン前には、Webでポジショニングマップを試せる機能を先行公開予定です。</p>
+    <div class="title-row">
+      <h1 class="logo">Move On Up</h1>
+      <a class="spotify-link" href="https://open.spotify.com/playlist/4eAKwJ1Z3pjR88TKLj4HZ3?si=d57e629ca4ae4c11" target="_blank">
+        <svg class="sp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="12" fill="#000"/>
+          <path d="M17.25 16.5c-.2 0-.38-.06-.54-.18-1.7-1.04-3.84-1.58-6.12-1.58-1.28 0-2.54.16-3.74.48-.22.06-.46.02-.64-.12a.76.76 0 0 1-.27-.58c0-.38.26-.7.62-.78 1.34-.36 2.74-.54 4.16-.54 2.56 0 4.98.62 6.92 1.8.3.18.44.52.34.86-.1.32-.4.54-.73.54zm1.18-2.96c-.24 0-.46-.08-.64-.22-1.98-1.22-4.98-1.92-7.5-1.92-1.46 0-2.84.22-4.08.64-.26.08-.54.04-.76-.14a.94.94 0 0 1-.32-.72c0-.46.3-.86.74-1 1.4-.44 2.94-.68 4.54-.68 2.82 0 6.1.76 8.38 2.16.36.22.54.64.42 1.04-.12.38-.48.64-.88.64zm1.34-3.44c-.24 0-.48-.06-.68-.2C16.9 8.4 13.4 7.6 9.86 7.6c-1.6 0-3.18.24-4.68.7-.3.1-.62.06-.88-.12a1.14 1.14 0 0 1-.46-.92c0-.54.36-1.02.88-1.18C6.38 5.6 8.1 5.3 9.86 5.3c3.9 0 7.76.9 10.62 2.52.44.26.66.76.52 1.24-.14.46-.56.78-1.04.78-.14 0-.28-.02-.44-.04z" fill="white"/>
+        </svg>
+      </a>
+    </div>
+    <p class="announce">８月１日、<br>ブランド定義のための<br>カードソーティング<br>サービスが<br>オープンします。</p>
+    <p class="subtext">オープン前には、<br>Web で<br>ポジショニングマップを<br>試せる機能を<br>先行公開予定です。</p>
     <span class="date-badge">2026.08.01</span>
   </div>
   <script>
