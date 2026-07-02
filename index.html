@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BrandDeck | 8月1日オープン予定</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --accent: #6f8bff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+    opacity: 0;
+    animation: fadeIn 1.2s ease forwards;
+  }
+  .container {
+    max-width: 390px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+  .announce {
+    font-size: 1.1rem;
+    line-height: 2;
+    color: var(--text-primary);
+  }
+  .subtext {
+    font-size: 0.9rem;
+    line-height: 1.9;
+    color: var(--text-secondary);
+  }
+  .date-badge {
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    border: 1px solid rgba(111, 139, 255, 0.4);
+    border-radius: 999px;
+    padding: 6px 20px;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <p class="announce">8月1日、<br>ブランド定義のための<br>カードソーティングサービスが<br>オープンします。</p>
+    <p class="subtext">オープン前には、Webでポジショニングマップを試せる機能を先行公開予定です。</p>
+    <span class="date-badge">2026.08.01</span>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.body.style.opacity = '1';
+    });
+  </script>
+</body>
+</html>
