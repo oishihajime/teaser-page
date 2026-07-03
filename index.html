@@ -18,14 +18,16 @@
     color: #333;
     min-height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    padding: 24px 16px;
+    padding-top: 200px;
+    padding-left: 28px;
+    padding-right: 28px;
     opacity: 0;
     animation: fadeIn 1.2s ease forwards;
   }
   .container {
-    max-width: 390px;
+    max-width: 334px;
     width: 100%;
     text-align: left;
     display: flex;
@@ -61,14 +63,17 @@
   .spotify-link:hover { opacity: 0.7; }
   .sp-icon { width: 18px; height: 18px; }
   .announce {
-    font-size: 1.25rem;
+    font-size: 30px;
     font-weight: 700;
     line-height: 1.7;
     color: #333;
     margin-bottom: 1rem;
   }
+  .latin {
+    font-family: "DIN Alternate", "DIN Condensed", "Barlow", sans-serif;
+  }
   .subtext {
-    font-size: 1rem;
+    font-size: 30px;
     font-weight: 700;
     line-height: 1.7;
     color: #666;
@@ -103,8 +108,8 @@
         </svg>
       </a>
     </div>
-    <p class="announce">８月１日、<br>ブランド定義のための<br>カードソーティング<br>サービスが<br>オープンします。</p>
-    <p class="subtext">オープン前には、<br>Web で<br>ポジショニングマップを<br>試せる機能を<br>先行公開予定です。</p>
+    <p class="announce"><span class="latin">8</span>月<span class="latin">&thinsp;1</span>日、<br>ブランド定義のための<br>カードソーティング<br>サービスが<br>オープンします。</p>
+    <p class="subtext">オープン前には、<br><span class="latin">Web</span> で<br>ポジショニングマップを<br>試せる機能を<br>先行公開予定です。</p>
     <span class="date-badge">2026.08.01</span>
   </div>
   <script>
